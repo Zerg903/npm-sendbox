@@ -32,6 +32,7 @@
     <Compile Include="server.js" />
     <Compile Include="webpack.config.js" />
     <Content Include=".editorconfig" />
+    <Content Include="package-lock.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="src\styles\variables.less" />

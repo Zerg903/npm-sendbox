@@ -1,0 +1,9 @@
+{
+  "name": "sendbox",
+  "version": "0.0.0",
+  "description": "Sendbox",
+  "main": "server.js",
+  "author": {
+    "name": "sergeyf"
+  }
+}

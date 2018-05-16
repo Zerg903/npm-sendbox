@@ -1,0 +1,16 @@
+﻿{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "alwaysStrict": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "target": "es5",
+    "jsx": "react"
+  },
+  "include": [
+    "src/scripts/**/*"
+  ]
+}

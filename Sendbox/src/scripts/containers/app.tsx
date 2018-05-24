@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Counter from './counter';
 import { connect } from 'react-redux';
-import { IState } from '../redux/store';
+import { IAppState } from '../redux/store';
 
 export type ComponentProps = {
   label: string
@@ -16,10 +16,10 @@ const Component: React.SFC<ComponentProps> = (props) => {
   );
 };
 
-function mapProps(state: IState): ComponentProps {
+function mapStateToProps(state: IAppState): ComponentProps {
   return {
     label: state.label,
   };
 }
 
-export default connect(mapProps)(Component);
+export default connect(mapStateToProps)(Component);

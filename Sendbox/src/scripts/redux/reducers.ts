@@ -1,13 +1,20 @@
-import * as counter from './counter/reducer';
-import { Action } from 'redux';
-import { IState } from './store';
+import counter from './counter/reducer';
+import { combineReducers } from 'redux';
 
-export default function reducer(state: IState, action: Action<string>) {
+// Function combineReducers
+// -----------------------------------
 
-  // TODO: механизм разрешения раздела следует оптимизировать!
-  if (action.type.indexOf('counter/') === 0) {
-    return { ...state, counter: counter.reducer(state.counter, action) };
-  }
+export default combineReducers({
+  counter,
+  // reducer для label необходим (by design combineReducers)!
+  label: createNoopReducer<string>('')
+});
 
-  return state;
+// Helpers
+// -----------------------------------
+
+function createNoopReducer<T>(initialValue: T) {
+  return (state: T = initialValue, action) => {
+    return state;
+  };
 }

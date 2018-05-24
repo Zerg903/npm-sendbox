@@ -1,9 +1,9 @@
 import * as counter from '../redux/counter/actions';
 import { Component, ComponentEvents, ComponentProps } from '../components/counter';
 import { connect, Dispatch } from 'react-redux';
-import { IState } from '../redux/store';
+import { IAppState } from '../redux/store';
 
-function mapStateToProps(state: IState): ComponentProps {
+function mapStateToProps(state: IAppState): ComponentProps {
   return {
     value: state.counter.value,
   };

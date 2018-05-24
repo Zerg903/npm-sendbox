@@ -6,7 +6,7 @@ import { ICounterState } from './counter/types';
 // Typed store
 // -----------------------------------
 
-export interface IState {
+export interface IAppState {
   readonly label: string;
   readonly counter: ICounterState;
 }
@@ -16,7 +16,7 @@ export interface IState {
 
 export function createAppStore() {
 
-  const initialState: IState = {
+  const initialState: IAppState = {
     label: 'Welcome to React!',
     counter: {
       value: 10

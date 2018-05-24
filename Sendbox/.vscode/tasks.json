@@ -1,0 +1,29 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  // For a quick call "Run Task..." set the keyboard shortcut [Ctrl] + [R]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "npm start",
+      "type": "npm",
+      "script": "start",
+      "problemMatcher": []
+    },
+    {
+      "label": "npm build",
+      "type": "npm",
+      "script": "build",
+      "problemMatcher": [],
+      "isBackground": true
+    },
+    {
+      "label": "tslint check",
+      "command": "tslint -c tslint.json 'src/**/*.ts{,x}'",
+      "type": "shell",
+      "problemMatcher": [
+        "$tsc"
+      ]
+    }
+  ]
+}

@@ -1,12 +1,11 @@
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createAppStore } from './redux/store';
+import App from './containers/app';
 
-class Hello extends React.Component {
-  public render() {
-    return (
-      <h2>Welcome to React!</h2>
-    );
-  }
-}
+const store = createAppStore();
+const element = <Provider store={store}><App /></Provider>;
 
-ReactDOM.render(<Hello />, document.getElementById('app-root'));
+ReactDOM.render(element, document.getElementById('app-root'));

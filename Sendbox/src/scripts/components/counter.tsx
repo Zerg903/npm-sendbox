@@ -1,13 +1,16 @@
 import * as React from 'react';
 import Button from './button';
 
-export type Props = {
-  value: number,
+export type ComponentProps = {
+  value: number
+};
+
+export type ComponentEvents = {
   onDecrement?: () => void,
   onIncrement?: () => void
 };
 
-export const Component: React.SFC<Props> = (props: Props) => {
+export const Component: React.SFC<ComponentProps & ComponentEvents> = (props) => {
   return (
     <div className="counter">
       <Button className="counter_btn counter_btn__decrement" text="-"

@@ -3,11 +3,11 @@ import Counter from './counter';
 import { connect } from 'react-redux';
 import { IState } from '../redux/store';
 
-export type MapProps = {
+export type ComponentProps = {
   label: string
 };
 
-const Component: React.SFC<MapProps> = (props: MapProps) => {
+const Component: React.SFC<ComponentProps> = (props) => {
   return (
     <div>
       <h2>{props.label}</h2>
@@ -16,10 +16,10 @@ const Component: React.SFC<MapProps> = (props: MapProps) => {
   );
 };
 
-function mapProps(state: IState): MapProps {
+function mapProps(state: IState): ComponentProps {
   return {
     label: state.label,
   };
 }
 
-export default connect<MapProps>(mapProps)(Component);
+export default connect(mapProps)(Component);

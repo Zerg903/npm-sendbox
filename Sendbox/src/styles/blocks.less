@@ -1,21 +1,66 @@
-
 @import "_variables";
 
-.content {
-  padding: @content-padding;
+&{
 
-  &__top {
-    background: @color-top;
+  @counter-height: 24px;
 
-    img {
-      width: auto;
-      height: 35px;
-    }
+  .content {
+      padding: @content-padding;
+
+      &__top {
+          background: @color-top;
+          img {
+              width: auto;
+              height: 35px;
+          }
+      }
+
+      &__app{
+        margin: 0 auto;
+        max-width: 600px;
+        min-width: 200px;
+      }
   }
-}
 
-.app-launching {
-  display: block;
-  margin-top: 25px;
-  font-style: italic;
+  .counter {
+
+      display: inline-block;
+      padding: 5px 6px;
+      background-color: @color-background;
+      border: 1px solid @color-border;
+      border-radius: @border-radius;
+
+      &_btn {
+          display: inline-block;
+          width: @counter-height;
+          height: @counter-height;
+          font-weight: 400;
+          border-width: 1px;
+          cursor: pointer;
+          border-width: 0;
+          border-color: @color-background-dark;
+          background-color: @color-background-dark;
+          text-decoration: none;
+          border-radius: @border-radius;
+
+          &:focus {
+              outline: 1px dotted;
+              outline: 5px auto -webkit-focus-ring-color;
+          }
+      }
+
+      &_value {
+          display: inline-block;
+          width: 100px;
+          line-height: @counter-height;
+          padding: 0 5px;
+          text-align: center;
+      }
+  }
+
+  .app-launching {
+      display: block;
+      margin-top: 25px;
+      font-style: italic;
+  }
 }

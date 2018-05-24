@@ -1,17 +1,15 @@
 
 import * as React from 'react';
-import Counter from './counter';
 
 export type Props = {
-  label: string
+  text: string,
+  className?: string;
+  onClick?: () => void;
 };
 
 export const Component: React.SFC<Props> = (props: Props) => {
   return (
-    <div>
-      <h2>{props.label}</h2>
-      <Counter value={10} />
-    </div>
+    <button className={props.className} onClick={props.onClick}>{props.text}</button>
   );
 };
 

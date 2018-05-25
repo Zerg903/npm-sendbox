@@ -9,13 +9,10 @@ export default function reducer(state: ICounterState = initialState, action: act
 
   switch (action.type) {
     case actions.INCREMENT_VALUE:
-      return {...state, value: state.value + 1};
+      return { ...state, value: state.value + 1 };
 
     case actions.DECREMENT_VALUE:
       return { ...state, value: state.value - 1 };
-
-    case actions.RESET_VALUE:
-      return { ...state, value: action.payload };
   }
 
   return state;

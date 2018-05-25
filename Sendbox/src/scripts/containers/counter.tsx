@@ -11,9 +11,8 @@ function mapStateToProps(state: IAppState): ComponentProps {
 
 function mapDispatchToProps(dispatch: Dispatch<counter.Actions>): ComponentEvents {
   return {
-    onDecrement: () => dispatch(counter.Actions.decrement()),
-    onIncrement: () => dispatch(counter.Actions.increment()),
-    // onReset: () => dispatch(counter.Actions.reset(10)),
+    onDecrement: () => dispatch(counter.Funstions.decrement()),
+    onIncrement: () => dispatch(counter.Funstions.increment()),
   };
 }
 

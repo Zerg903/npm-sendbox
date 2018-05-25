@@ -1,18 +1,19 @@
-import * as counter from '../redux/counter/actions';
-import { Component, ComponentEvents, ComponentProps } from '../components/counter';
+import * as counter from '../redux/users/actions';
+import { Component, ComponentEvents, ComponentProps } from '../components/users';
 import { connect, Dispatch } from 'react-redux';
 import { IAppState } from '../redux/store';
 
 function mapStateToProps(state: IAppState): ComponentProps {
   return {
-    value: state.counter.value,
+    asyncStatus: state.users.asyncStatus,
+    users: state.users.items
   };
 }
 
 function mapDispatchToProps(dispatch: Dispatch<counter.Actions>): ComponentEvents {
   return {
-    onDecrement: () => dispatch(counter.Functions.decrement()),
-    onIncrement: () => dispatch(counter.Functions.increment()),
+    onFetch: () => dispatch(counter.Functions.fetching()),
+    onFetchWithError: () => dispatch(counter.Functions.fetchWithError()),
   };
 }
 

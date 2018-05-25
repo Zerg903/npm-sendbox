@@ -1,4 +1,5 @@
 import counter from './counter/reducer';
+import users from './users/reducer';
 import { combineReducers } from 'redux';
 
 // Function combineReducers
@@ -6,6 +7,7 @@ import { combineReducers } from 'redux';
 
 export default combineReducers({
   counter,
+  users,
   // reducer для label необходим (by design combineReducers)!
   label: createNoopReducer<string>('')
 });

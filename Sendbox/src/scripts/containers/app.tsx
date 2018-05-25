@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Counter from './counter';
+import Users from './users';
 import { connect } from 'react-redux';
 import { IAppState } from '../redux/store';
 
@@ -13,6 +14,8 @@ const Component: React.SFC<ComponentProps> = (props) => {
       <h1>{props.label}</h1>
       <h2>Counter</h2>
       <Counter />
+      <h2>Users</h2>
+      <Users />
     </div>
   );
 };

@@ -6,7 +6,7 @@ export const DECREMENT_VALUE = 'counter/DECREMENT_VALUE';
 export const INCREMENT_VALUE = 'counter/INCREMENT_VALUE';
 
 export const COUNTER_MIN_VALUE = 1;
-export const COUNTER_MAX_VALUE = 20;
+export const COUNTER_MAX_VALUE = 12;
 
 // action creators
 export const Actions = {
@@ -18,7 +18,7 @@ export const Actions = {
 export type Actions = ActionUnion<typeof Actions>;
 
 // action creator functions (business logic)
-export const Funstions = {
+export const Functions = {
 
   decrement() {
     return (dispatch: Dispatch<Actions>, getState: () => IAppState) => {

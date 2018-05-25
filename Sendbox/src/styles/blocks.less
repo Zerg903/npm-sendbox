@@ -29,31 +29,54 @@
       width: 160px;
 
       &_btn {
-          display: inline-block;
           width: @counter-height;
           height: @counter-height;
-          font-weight: 400;
-          border-width: 1px;
           cursor: pointer;
-          border-width: 0;
-          border-color: @color-background-dark;
-          background-color: @color-background-dark;
-          text-decoration: none;
-          border-radius: @border-radius;
-
-          &:focus {
-              outline: 1px dotted;
-              outline: 5px auto -webkit-focus-ring-color;
-          }
       }
 
       &_value {
           display: inline-block;
-          width: 100px;
+          width: 60px;
           line-height: @counter-height;
           padding: 0 5px;
           text-align: center;
       }
+  }
+
+  .users{
+    margin-top: @block-margin;
+    margin-bottom: @block-margin;
+
+    UL{
+      display: block;
+      padding: 0;
+      margin: -15px 0 0 -15px;
+    }
+
+    LI {
+      display: block;
+      padding: 5px;
+      margin: 15px 0 0 15px;
+      list-style: none;
+      float:left;
+      width: 128px;
+      text-align: center;
+      background-color: lightgrey;
+    }
+
+    IMG {
+      width: 128px;
+      height: 128px;
+    }
+
+    &__fetching{
+      opacity: .5;
+      filter: blur(2px);
+    }
+
+    &_toolbar{
+      text-align: center;
+    }
   }
 
   .app-launching {

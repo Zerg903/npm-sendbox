@@ -1,6 +1,8 @@
 
-// Реализация взять отсюда (требуется TypeScript 2.8+):
+// Реализация взята тут:
 // https://medium.com/@martin_hotell/improved-redux-type-safety-with-typescript-2-8-2c11a8062575
+//
+// ~~~ Требуется TypeScript 2.8+ ~~~
 
 type FunctionType = (...args: any[]) => any;
 type ActionCreatorsMapObject = { [actionCreator: string]: FunctionType };

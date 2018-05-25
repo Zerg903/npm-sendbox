@@ -10,7 +10,8 @@ export type ComponentProps = {
 const Component: React.SFC<ComponentProps> = (props) => {
   return (
     <div>
-      <h2>{props.label}</h2>
+      <h1>{props.label}</h1>
+      <h2>Counter</h2>
       <Counter />
     </div>
   );

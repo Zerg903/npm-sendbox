@@ -1,5 +1,6 @@
 import logger from 'redux-logger';
 import reducer from './reducers';
+import thunk from 'redux-thunk';
 import { applyMiddleware, createStore } from 'redux';
 import { ICounterState } from './counter/types';
 
@@ -26,6 +27,6 @@ export function createAppStore() {
   return createStore(
     reducer,
     initialState,
-    applyMiddleware(logger)
+    applyMiddleware(thunk, logger)
   );
 }

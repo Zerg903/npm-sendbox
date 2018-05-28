@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { AsyncStatus } from '../lib/async-helpers';
 import { User } from '../models/domains';
 
 export type ComponentProps = {

@@ -1,17 +1,19 @@
 import { ActionUnion, createAction } from '../../lib/action-helpers';
-import { AsyncStatus } from '../../lib/async-helpers';
+import { AsyncStatus } from '../../models/async';
 import { Dispatch } from 'react-redux';
 import { fetchUsersAsync } from '../../services/api';
 import { IAppState } from '../store';
 import { User } from '../../models/domains';
 
-export const FETCHING_USERS = 'users/FETCHING_USERS';
-export const FETCHED_USERS = 'users/FETCHED_USERS';
+export const LIST_FETCHING = 'users/LIST_FETCHING';
+export const LIST_FETCHED_SUCCESS = 'users/LIST_FETCHED_SUCCESS';
+export const LIST_FETCHED_ERROR = 'users/LIST_FETCHED_ERROR';
 
 // action creators
 export const Actions = {
-  fetching: (asyncStatus: AsyncStatus) => createAction(FETCHING_USERS, { asyncStatus }),
-  fetched: (asyncStatus: AsyncStatus, items: User[] = null) => createAction(FETCHED_USERS, { asyncStatus, items })
+  fetching: (asyncStatus: AsyncStatus) => createAction(LIST_FETCHING, { asyncStatus }),
+  fetchedSuccess: (items: User[] = null) => createAction(LIST_FETCHED_SUCCESS, { items }),
+  fetchedError: () => createAction(LIST_FETCHED_ERROR)
 };
 
 // action creator types
@@ -44,13 +46,13 @@ function fetchUsers(dispatch: Dispatch<Actions>, quantity: number, throwError: b
 
   fetchUsersAsync(quantity, throwError)
     .then(users => {
-      dispatch(Actions.fetched(AsyncStatus.success, users));
+      dispatch(Actions.fetchedSuccess(users));
     })
     .catch((error: Error) => {
 
       // tslint:disable-next-line:no-console
       console.log(error);
 
-      dispatch(Actions.fetched(AsyncStatus.error));
+      dispatch(Actions.fetchedError());
     });
 }

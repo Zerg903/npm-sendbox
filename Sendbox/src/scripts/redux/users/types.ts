@@ -1,4 +1,4 @@
-import { AsyncStatus } from '../../lib/async-helpers';
+import { AsyncStatus } from '../../models/async';
 import { User } from '../../models/domains';
 
 // State

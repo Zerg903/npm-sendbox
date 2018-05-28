@@ -2,7 +2,6 @@ import logger from 'redux-logger';
 import reducer from './reducers';
 import thunk from 'redux-thunk';
 import { applyMiddleware, createStore } from 'redux';
-import { AsyncStatus } from '../lib/async-helpers';
 import { ICounterState, initialCounterState } from './counter/types';
 import { initialUsersState, IUsersState } from './users/types';
 

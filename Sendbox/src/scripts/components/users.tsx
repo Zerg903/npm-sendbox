@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Button from './button';
 import UsersList from './users-list';
-import { AsyncStatus } from '../lib/async-helpers';
+import { AsyncStatus } from '../models/async';
 import { User } from '../models/domains';
 
 export type ComponentProps = {

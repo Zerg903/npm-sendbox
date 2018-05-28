@@ -6,7 +6,7 @@
     "private": true,
     "scripts": {
         "start": "set PORT=3100 & start http://localhost:3100 & node server.js",
-        "build": "webpack --config webpack.config.js --mode production"
+        "build": "webpack --config webpack.config.js --mode production --progress"
     },
     "dependencies": {
         "react": "^16.3.2",

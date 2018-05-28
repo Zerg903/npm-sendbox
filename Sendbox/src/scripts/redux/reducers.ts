@@ -1,5 +1,6 @@
 import counter from './counter/reducer';
 import users from './users/reducer';
+import { Action } from 'redux';
 import { combineReducers } from 'redux';
 
 // Function combineReducers
@@ -16,7 +17,7 @@ export default combineReducers({
 // -----------------------------------
 
 function createNoopReducer<T>(initialValue: T) {
-  return (state: T = initialValue, action) => {
+  return (state: T = initialValue, action: Action) => {
     return state;
   };
 }

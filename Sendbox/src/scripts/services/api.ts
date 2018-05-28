@@ -19,15 +19,17 @@ export async function fetchUsersAsync(quantity: number, throwError: boolean = fa
 // ------------------------
 
 type JsonResult = {
-  data: Array<{
-    id: number,
-    first_name: string,
-    last_name: string,
-    avatar: string,
-  }>
+  data: JsonUser[]
 };
 
-const jsonMapper = (item): User => {
+type JsonUser = {
+  id: number,
+  first_name: string,
+  last_name: string,
+  avatar: string,
+}
+
+const jsonMapper = (item: JsonUser): User => {
   return {
     id: item.id,
     firstName: item.first_name,

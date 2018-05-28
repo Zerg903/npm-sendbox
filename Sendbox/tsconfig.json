@@ -1,12 +1,13 @@
 ﻿{
   "compilerOptions": {
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "noEmitOnError": true,
-    "removeComments": false,
+    "removeComments": true,
+    "preserveConstEnums": true,
     "alwaysStrict": true,
-    "module": "es2015",
+    "sourceMap": true,
     "moduleResolution": "node",
-    "sourceMap": false,
+    "module": "es2015",
     "target": "es5",
     "lib": [
       "es2015",
